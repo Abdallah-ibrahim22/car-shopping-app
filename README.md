@@ -1,2 +1,2 @@
-# car-shopping-app
-car shopping app with django
+# car-shopping
+full stack app (car shopping) 

@@ -1,0 +1,32 @@
+{% extends "base/base.html" %}
+<!-- this means to extends the base file in the base folder in each template 
+    exit in each app we created  -->
+
+{% load crispy_forms_tags %}
+
+
+{% load static %}
+
+
+{% block body %}
+    <div class="mn">
+        <main class="form-signin">
+            <form action="" method="post">
+                {% csrf_token %}
+                <img style="display: block;" 
+                src="{% static 'images/logo.png' %}" class="mb-4 logo" width="90" height="90">
+                {{register_form|crispy}}
+                <button type="submit" class="btnn">Sign-in</button>
+            </form>
+
+        </main>
+    </div>
+{% endblock body %}
+    
+{% block footer %}
+<footer class="mt-auto text-white-50">
+    <p>Copyright © {% now 'Y' %} <a href="{% url 'main' %}" >AutoMax</a> by <a href="https://preneure.com"
+            >Preneure.com</a></p>
+</footer>
+{% endblock footer %}
+

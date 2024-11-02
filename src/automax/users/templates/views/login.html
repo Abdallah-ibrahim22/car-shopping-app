@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+<!-- this means to extends the base file in the base folder in each template 
+    exit in each app we created  -->
+
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+
+{% block body %}
+    <div class="mn">
+        <main class="form-signin">
+            <form action="" method="post">
+                <img style="display: block;" 
+                src="{% static 'images/logo.png' %}" class="mb-4 logo" width="90" height="90">
+                {% csrf_token %}
+                {{login_form|crispy}}
+
+                <!-- so here we apply crispy to the form to style it -->
+                <button type="submit" class="btnn">Sign-in</button>
+            </form>
+
+        </main>
+    </div>
+{% endblock body %}
+    
+{% block footer %}
+{% endblock %}
+
