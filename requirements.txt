@@ -1,0 +1,10 @@
+Django>=3.2,<5.0                 # Django core framework (adjust version as needed)
+django-localflavor>=3.0           # Provides localized form fields for Django
+django-crispy-forms>=2.0          # For form styling with Crispy Forms
+crispy-bootstrap5>=0.7            # Bootstrap 5 support for crispy-forms
+django-filter>=22.0               # Filtering for Django querysets
+
+# Optional: Include additional libraries if you have them installed for specific functionality
+# djangorestframework>=3.14        # (if using Django REST Framework)
+# Pillow>=9.0                      # (if handling images with ImageField)
+
